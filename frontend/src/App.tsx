@@ -223,7 +223,7 @@ export default function App() {
         </>
       )}
 
-      {view === 'story' && <Scrollytelling lakes={lakes} exposure={exposure} onDetective={() => go('detective')} onMap={goMap} />}
+      {view === 'story' && <Scrollytelling onDetective={() => go('detective')} onMap={goMap} />}
       {view === 'detective' && <Detective lakes={lakes} onOpenMap={openOnMap} onClose={goMap} />}
       {creditsOpen && <Credits onClose={() => setCreditsOpen(false)} />}
 
